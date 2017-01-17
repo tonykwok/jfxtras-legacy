@@ -1,0 +1,17 @@
+The JavaFX runtime is not available in any public Maven repository, it has to be installed in the local repository manually using the command below:
+
+	mvn install:install-file -Dfile=/path-to/javafx-sdk2.0-beta/rt/lib/jfxrt.jar -DgroupId=com.oracle -DartifactId=javafx-runtime -Dversion=2.0-beta -Dpackaging=jar -DgeneratePom=true 
+
+Naturally the path-to must be your path to where the JavaFX SDK is installed.
+Next, the relevant binary JNI files in the lib directory need to be installed; create a zip file containing all files in the lib directory in the root and install that in the local repository using the command below:
+
+	mvn install:install-file -Dfile=/path-to/bin.zip -DgroupId=com.oracle -DartifactId=javafx-runtime -Dversion=2.0-beta -Dclassifier=windows -Dpackaging=jar -DgeneratePom=true 
+	
+Now the correct artifacts can be found. 
+
+However, JavaFX will load the binaries in the zip file from a path relative to the jfxrt.jar, being ../bin or from java.library.path. 
+JFXtras contains a utility method that will unpack these files to a temp directory and set java.library.path accordingly:
+
+	jfxtras.application.Application.prelaunch();
+	
+This method must be called before the launch method.

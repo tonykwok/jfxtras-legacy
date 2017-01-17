@@ -1,0 +1,110 @@
+/* 
+    Document   : PillButton
+    Created on : 01.09.2011., 08:33:27
+    Author     : Goran Lochert
+    Description: stylesheet for PillButton Control        
+*/
+
+.pill-buttonx {
+    -fx-skin: "jfxtras.scene.control.PillButtonXSkin";
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 2 10 3 10;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-alignment: center;
+    -fx-graphic-vpos: left;
+}
+
+
+/*.pill-button:focused {
+    -fx-color: -fx-focused-base;
+    -fx-background-color: -fx-focus-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: -1.4, 0, 1, 2;
+    -fx-background-radius: 6.4, 5, 4, 3;
+}*/
+
+.pill-buttonx:selected {
+    -fx-background-color:
+        -fx-shadow-highlight-color,
+        linear-gradient(to bottom, derive(-fx-color,-90%) 0%, derive(-fx-color,-60%) 100%),
+        linear-gradient(to bottom, derive(-fx-color,-60%) 0%, derive(-fx-color,-35%) 50%, derive(-fx-color,-30%) 98%, derive(-fx-color,-50%) 100%),
+        linear-gradient(to right, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,0) 90%, rgba(0,0,0,0.3) 100%);
+    -fx-background-insets: 0 0 -1 0, 0, 1, 1;
+    -fx-text-fill: -fx-light-text-color;
+}
+
+
+
+
+/*.pill-button:selected:focused {
+    -fx-color: -fx-focused-base;
+    -fx-background-color:
+        -fx-focus-color,
+        linear (0%,0%) to (0%,100%) stops (0%, derive(-fx-color,-90%)) (100%, derive(-fx-color,-60%)),
+        linear (0%,0%) to (0%,100%) stops (0%, derive(-fx-color,-60%)) (50%, derive(-fx-color,-35%)) (98%, derive(-fx-color,-30%)) (100%, derive(-fx-color,-50%)),
+        linear (0%,0%) to (100%,0%) stops (0%, rgba(0,0,0,0.3)) (10%, rgba(0,0,0,0)) (90%, rgba(0,0,0,0)) (100%, rgba(0,0,0,0.3));
+    -fx-background-insets: -1.4, 0, 1, 1;
+}*/
+
+.pill-buttonx:hover {
+    -fx-color: -fx-hover-base;
+}
+
+.pill-buttonx:armed {
+    -fx-color: -fx-pressed-base;
+}
+
+.pill-buttonx:default {
+    -fx-base: -fx-accent;
+    /*    -fx-base: red;*/
+}
+
+.pill-buttonx:cancel {
+    -fx-base: -fx-accent;
+}
+
+.pill-buttonx:disabled {
+    -fx-opacity: -fx-disabled-opacity;
+}
+
+/*.pill-button:center, .pill-button:center:hover, .pill-button:center:armed {
+    -fx-background-radius: 0, 0, 0, 0;
+}*/
+
+
+.pill-buttonx:top, .pill-buttonx:top:hover, .pill-buttonx:top:armed {   
+    -fx-background-radius: 5 5 0 0, 5 5 0 0, 4 4 0 0, 3 3 0 0; /* top left and top right corners are rounded */
+}
+
+.pill-buttonx:right, .pill-buttonx:right:hover, .pill-buttonx:right:armed {
+    -fx-background-radius: 0 5 5 0, 0 5 5 0, 0 4 4 0, 0 3 3 0; /* top right and bottom right corners are rounded */
+}
+
+
+.pill-buttonx:bottom, .pill-buttonx:bottom:hover, .pill-buttonx:bottom:armed {
+    -fx-background-radius: 0 0 5 5, 0 0 5 5, 0 0 4 4, 0 0 3 3; /* bottom left and bottom right corners are rounded */
+}
+
+.pill-buttonx:left, .pill-buttonx:left:hover, .pill-buttonx:left:armed {
+    -fx-background-radius: 5 0 0 5, 5 0 0 5, 4 0 0 4, 3 0 0 3; /* top left and bottom left corners are rounded */
+}
+
+
+.pill-buttonx:top-left, .pill-buttonx:top-left:hover, .pill-buttonx:top-left:armed {
+    -fx-background-radius: 5 0 0 0, 5 0 0 0, 4 0 0 0, 3 0 0 0;  /* top left corner is rounded */
+}
+
+.pill-buttonx:top-right, .pill-buttonx:top-right:hover, .pill-buttonx:top-right:armed {
+    -fx-background-radius: 0 5 0 0, 0 5 0 0, 0 4 0 0, 0 3 0 0; /* top right corner is rounded */
+}
+
+.pill-buttonx:bottom-right, .pill-buttonx:bottom-right:hover, .pill-buttonx:bottom-right:armed {
+    -fx-background-radius: 0 0 5 0, 0 0 5 0, 0 0 4 0, 0 0 3 0; 
+}
+
+.pill-buttonx:bottom-left, .pill-buttonx:bottom-left:hover, .pill-buttonx:bottom-left:armed {
+    -fx-background-radius: 0 0 0 5, 0 0 0 5, 0 0 0 4, 0 0 0 3; /* bottom left corner is rounded */
+}
+
+

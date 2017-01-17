@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : overlay.xml
+    Created on : October 21, 2009, 4:31 PM
+    Author     : jimclarke
+    Description:
+        Purpose of the document follows.
+-->
+
+<overlays>
+    <classpath>
+        <pathelement path="TestOverlay.jar" />
+    </classpath>
+    <overlay index="2" class="jfxslideshow.TestOverlay" />
+</overlays>

@@ -1,0 +1,11 @@
+/* 
+    Document   : DeckPaneX
+    Created on : 01.09.2011., 16:52:49
+    Author     : Goran Lochert
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.deck-panex {
+    -fx-skin: "jfxtras.scene.control.DeckPaneXSkin";
+}

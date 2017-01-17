@@ -1,0 +1,92 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
+	<groupId>org.jfxtras</groupId>
+	<artifactId>jfxtras-parent</artifactId>
+	<version>2.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	
+	<modules>
+		<module>common</module>
+		<module>controls</module>
+	</modules>
+
+	<dependencies>		
+		<!-- 2011-07-30: this dependency is in no public online Maven repostiory, you have to upload it to the local repository manually (see maven.txt). Therefore it has scope "provided" -->
+		<dependency>	
+			<groupId>com.oracle</groupId> 		
+			<artifactId>javafx-runtime</artifactId>			
+			<version>2.1</version>		
+			<scope>provided</scope>	
+		</dependency>
+	</dependencies>
+	<profiles>
+		<profile>
+			<activation>
+				<os><family>windows</family></os>
+			</activation>
+			<dependencies>
+				<dependency>	
+					<groupId>com.oracle</groupId> 					
+					<artifactId>javafx-runtime</artifactId>			
+					<version>2.1</version>			
+					<classifier>windows</classifier>	
+					<scope>provided</scope>	
+				</dependency>
+			</dependencies>
+		</profile>
+	</profiles>
+	
+	<build>
+		<plugins>
+		
+			<!-- jfxtras assumes java 1.6 as the minimal JDK -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.1</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<showDeprecation>false</showDeprecation>
+					<fork>false</fork>
+				</configuration>
+			</plugin>
+			
+			<!-- surefire 2.7+ runs test classes by annotation instead of classname pattern -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.8.1</version>
+			</plugin>
+		</plugins>
+    </build>
+	
+	<licenses>
+		<license>
+			<name>New BSD</name>
+			<url>http://en.wikipedia.org/wiki/BSD_licenses#3-clause_license_.28.22New_BSD_License.22_or_.22Modified_BSD_License.22.29</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+  	<scm>
+    	<connection>scm:hg:https://code.google.com/p/jfxtras/</connection>
+    	<developerConnection>scm:hg:https://code.google.com/p/jfxtras/</developerConnection>
+    	<url>http://code.google.com/p/jfxtras/source/browse/</url>
+  	</scm>
+
+	<developers>
+		<developer>
+			<id>tbee</id>
+			<name>Tom Eugelink</name>
+			<email>tbee@tbee.org</email>
+		</developer>
+	</developers>
+</project>

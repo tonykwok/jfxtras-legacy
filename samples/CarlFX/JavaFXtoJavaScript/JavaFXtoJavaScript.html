@@ -1,0 +1,40 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JavaFXtoJavaScript</title>
+</head>
+<body>
+<h1>JavaFX to JavaScript and Back</h1>
+<script src="http://dl.javafx.com/1.2/dtfx.js"></script>
+<script>
+    javafx(
+        {
+              archive: "dist/JavaFXtoJavaScript.jar",
+              draggable: true,
+              width: 500,
+              height: 400,
+              code: "javafxtojavascript.Main",
+              name: "JavaFXtoJavaScript",
+			  id: "ballApp"
+        },
+		{ isApplet: "true" }
+    );
+</script>
+<script>
+function addBalls() {
+	document.ballApp.script.addBalls(document.getElementById('numBallsToAdd').value);
+}
+</script>
+
+<form>
+  <table>
+     <tr><th>Add balls to Scene :</th><td><input id="numBallsToAdd" name="numBallsToAdd" value="1"/></td><td><input onClick="addBalls();" type="button" name="addButton" value="Add Ball(s)"/></td></tr>
+	 <tr><th>Number of balls: </th><td><input id="numBalls" name="numBalls" READONLY/></td></tr>
+	 <tr><td colspan="3"><a href="http://jfxstudio.wordpress.com/"> Back to JFXStudio: sketch, hack, share</a><td></tr>
+	 <tr><td colspan="3"><a href="http://carlfx.wordpress.com/2009/07/04/javafx-to-javascript-and-back/"> Back to CarlFX</a><td></tr>
+	 <tr><td colspan="3"><a href="http://www.javafx.com"> Back to JavaFX dot com</a><td></tr>
+  </table>
+<br/>
+</form>
+</body>
+</html>

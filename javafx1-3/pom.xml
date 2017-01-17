@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.jfxtras</groupId>
+		<artifactId>parent</artifactId>
+		<version>1.3.1</version>
+	</parent>
+
+	<groupId>org.jfxtras</groupId>
+	<artifactId>jfxtras</artifactId>
+	<version>0.8-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>JFXtras</name>
+
+	<modules>
+		<module>common</module>
+		<module>jfxtras-test</module>
+		<module>common-tests</module>
+		<module>controls</module>
+        <module>redfx-rest</module>
+	</modules>
+
+	<scm>
+		<connection>scm:hg:https://jfxtras.googlecode.com/hg/</connection>
+		<developerConnection>scm:svn:http://jfxtras.googlecode.com/svn/jfxtras.core/trunk/</developerConnection>
+		<url>http://code.google.com/p/jfxtras/source/browse/</url>
+	</scm>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.jfxtras</groupId>
+				<artifactId>jfxtras-common</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jfxtras</groupId>
+				<artifactId>jfxtras-test</artifactId>
+				<version>${project.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>com.miglayout</groupId>
+				<artifactId>miglayout</artifactId>
+				<version>3.7.2</version>
+			</dependency>
+			<dependency>
+				<groupId>org.swinglabs</groupId>
+				<artifactId>swing-worker</artifactId>
+				<version>1.1</version>
+			</dependency>
+
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>1.8.3</version>
+                <optional>true</optional>
+            </dependency>
+        </dependencies>
+	</dependencyManagement>
+
+
+	<dependencies>
+		<!--JavaFX Dependencies-->
+		<dependency>
+			<groupId>javax.javafx.shared</groupId>
+			<artifactId>javafxrt</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.javafx.desktop</groupId>
+			<artifactId>rt15</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.javafx.desktop</groupId>
+			<artifactId>javafx-geom</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.javafx.desktop</groupId>
+			<artifactId>javafx-ui-common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.javafx.desktop</groupId>
+			<artifactId>javafx-ui-desktop</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.javafx.desktop</groupId>
+			<artifactId>javafx-ui-swing</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.javafx.desktop</groupId>
+			<artifactId>fxloader</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.javafx.desktop</groupId>
+			<artifactId>websvc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.javafx.desktop</groupId>
+			<artifactId>javafx-ui-controls</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.javafx.desktop</groupId>
+			<artifactId>javafx-ui-charts</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.javafx.desktop</groupId>
+			<artifactId>javafx-common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.javafx.desktop</groupId>
+			<artifactId>javafx-io</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.javafx.desktop</groupId>
+			<artifactId>javafx-ext-swing</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.javafx.desktop</groupId>
+			<artifactId>javafx-sg-common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.javafx.desktop</groupId>
+			<artifactId>javafx-sg-swing</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.javafx.desktop</groupId>
+			<artifactId>javafx-anim</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.javafx.desktop</groupId>
+			<artifactId>decora-runtime</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.javafx.desktop</groupId>
+			<artifactId>decora-j2d</artifactId>
+		</dependency>
+		<!--<dependency>-->
+		<!--<groupId>javax.javafx.desktop</groupId>-->
+		<!--<artifactId>decora-jsw</artifactId>-->
+		<!--</dependency>-->
+		<!--<dependency>-->
+		<!--<groupId>javax.javafx.desktop</groupId>-->
+		<!--<artifactId>decora-ogl</artifactId>-->
+		<!--</dependency>-->
+
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.easytesting</groupId>
+            <artifactId>fest-swing-junit</artifactId>
+            <version>1.2.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.cedarsoft.commons</groupId>
+            <artifactId>test-utils</artifactId>
+            <version>2.0.4</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.testng</groupId>
+                    <artifactId>testng</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<testSourceDirectory>test</testSourceDirectory>
+		<resources>
+			<resource>
+				<directory>${basedir}/src/</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+					<exclude>**/*.fx</exclude>
+				</excludes>
+			</resource>
+		</resources>
+
+		<testResources>
+			<testResource>
+				<directory>${basedir}/test/</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+					<exclude>**/*.fx</exclude>
+				</excludes>
+			</testResource>
+		</testResources>
+
+
+		<plugins>
+			<plugin>
+				<groupId>org.easytesting</groupId>
+				<artifactId>javafxc-maven-plugin</artifactId>
+				<configuration>
+					<sourceDirectory>${basedir}/src</sourceDirectory>
+					<testSourceDirectory>${basedir}/test</testSourceDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<developers>
+		<developer>
+			<id>Stephen Chin &lt;steve@widgetfx.org&gt;</id>
+			<name>Stephen Chin</name>
+			<email>steve@widgetfx.org</email>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>Johannes Schneider &lt;js@cedarsoft.com&gt;</id>
+			<name>Johannes Schneider</name>
+			<email>js@cedarsoft.com</email>
+			<roles>
+				<role>developer</role>
+				<role>maven</role>
+			</roles>
+			<timezone>2</timezone>
+			<url>http://blog.cedarsoft.com</url>
+			<organization>cedarsoft GmbH</organization>
+			<organizationUrl>http://www.cedarsoft.com</organizationUrl>
+		</developer>
+		<developer>
+			<id>tbeernot@gmail.com</id>
+			<name>Tom Beernot</name>
+			<email>tbeernot@gmail.com</email>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>Dean Iverson (dean@pleasingsoftware.com)</id>
+			<name>Dean Iverson</name>
+			<email>dean@pleasingsoftware.com</email>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>David Armitage &lt;dnarmitage@hotmail.com&gt;</id>
+			<name>David Armitage</name>
+			<email>dnarmitage@hotmail.com</email>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+
+</project>

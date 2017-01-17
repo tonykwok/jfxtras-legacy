@@ -1,0 +1,78 @@
+.list-combo-boxx {
+    -fx-skin: "jfxtras.scene.control.ListComboBoxXSkin";
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 5, 5, 4, 3;
+    -fx-alignment: CENTER;
+    -fx-padding: 2 4 2 4;
+}
+
+.list-combo-boxx:focused {
+    -fx-color: -fx-focused-base;
+    -fx-background-color: -fx-focus-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: -1.4, 0, 1, 2;
+    -fx-background-radius: 6.4, 5, 4, 3;
+}
+
+
+/*.list-combo-boxx:hover {
+    -fx-color: -fx-hover-base;
+}*/
+
+.list-combo-boxx:disabled {
+    -fx-opacity: -fx-disabled-opacity;
+}
+
+.list-combo-boxx:showing {
+    -fx-color: -fx-pressed-base;
+    -fx-background-color: -fx-focus-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-radius: 5, 5, 4, 3;
+    -fx-background-insets: -1.4, 0, 1, 2;
+    -fx-background-radius: 6.4, 5, 4, 3;
+}
+
+.list-combo-boxx:showing .list-view {
+    -fx-color: -fx-base; /* switch back to fx-base cuz list gets -fx-pressed-base*/
+}
+
+
+.list-combo-boxx .label{
+    -fx-padding: 0 2 0 6;
+}
+
+.list-combo-boxx .arrow-container {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+    -fx-background-radius: 0 5 5 0, 0 5 5 0, 0 4 4 0, 0 3 3 0; /* top right and bottom right corners are rounded */
+    -fx-alignment: CENTER;
+    -fx-padding: 10;
+}
+
+.list-combo-boxx:arrow-on-left .arrow-container {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+    -fx-background-radius: 5 0 0 5, 5 0 0 5, 4 0 0 4, 3 0 0 3; /* top left and bottom left corners are rounded */
+    -fx-alignment: CENTER;
+    -fx-padding: 10;
+}
+
+.list-combo-boxx .arrow-container:hover {
+    -fx-color: -fx-hover-base;
+}
+
+.list-combo-boxx:showing .arrow-container {
+    -fx-color: -fx-pressed-base;
+}
+
+
+.list-combo-boxx .arrow-container:pressed {
+    -fx-color: -fx-pressed-base;
+}
+
+.list-combo-boxx .arrow {
+    -fx-background-color: -fx-mark-highlight-color, -fx-mark-color;
+    -fx-background-insets: 1 0 -1 0, 0;
+    -fx-padding: 5 5 5 5;
+    -fx-shape: "M 0 0 h 14 l -7 8 z";
+    -fx-scale-shape: false;
+}

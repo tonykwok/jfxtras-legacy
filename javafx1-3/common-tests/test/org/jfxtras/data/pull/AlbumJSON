@@ -1,0 +1,69 @@
+{
+  "code":          "/api/status/ok",
+  "result": {
+    "/common/topic/image": [
+      {
+        "id": "/wikipedia/images/en_id/1292839"
+      },
+      {
+        "id": "/wikipedia/images/en_id/969104"
+      }
+    ],
+    "/music/artist/contribution": [{
+      "album": {
+        "/common/topic/image": [{
+          "id": "/wikipedia/images/en_id/1043391"
+        }],
+        "name": "Let It Roll",
+        "track": [
+          {
+            "length": 262,
+            "name":   "Hate to Lose Your Lovin'"
+          },
+          {
+            "length": 290,
+            "name":   "One Clear Moment"
+          },
+          {
+            "length": 235.466,
+            "name":   "Cajun Girl"
+          },
+          {
+            "length": 352.133,
+            "name":   "Listen to Your Heart"
+          },
+          {
+            "length": 270.826,
+            "name":   "Let It Roll"
+          },
+          {
+            "length": 292.373,
+            "name":   "Long Time Till I Get Over You"
+          },
+          {
+            "length": 268.226,
+            "name":   "Business as Usual"
+          },
+          {
+            "length": 378.373,
+            "name":   "Changin' Luck"
+          },
+          {
+            "length": 378.56,
+            "name":   "Voices on the Wind"
+          },
+          {
+            "length": 286.4,
+            "name":   "Hangin' on to the Good Times"
+          }
+        ]
+      },
+      "id": "/guid/9202a8c04000641f800000000394f17c"
+    }],
+    "id":   "/en/bob_seger",
+    "name": "Bob Seger",
+    "type": "/music/artist"
+  },
+  "status":        "200 OK",
+  "transaction_id": "cache;cache02.p01.sjc1:8101;2009-05-21T18:33:27Z;0010"
+}

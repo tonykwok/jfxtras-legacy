@@ -1,0 +1,142 @@
+Change Log
+
+0.5 Release
+
+New Features, Enhancements, and Changes:
+* JavaFX Wrapper for Swing
+    - The new SceneToJComponentScene class makes it easy to wrap your JavaFX user interface in a JComponent that you can use from any Swing UI
+    - This insulates you from directly calling the JavaFX internal APIs, which may change in any release.
+
+* JavaFX 1.2 Compatibility:
+    - This breaks binary compatibility with old versions.  Please recompile all your code
+
+* JSONHandler
+    - Enhanced variable name mapping support
+
+* JFXtras Borders Changes:
+    - Border child is now in a parameter called "node" rather than "content"
+    - New shapeToFit property to choose between matching the container set width/height or wrapping the nested node
+    - Properties are now exposed directly on the border classes in addition to being accessible from CSS.
+    - Various border tweaks...  ShapeBorder is now used for clipping, TitledBorder has a line, etc.
+
+* JFXtras Layout Changes:
+    - HAlign/VAlign have been removed in favor of using the new built-in HPos/VPos classes.
+    - Fill is not an orthoganal property in its own class used by ExtendedLayoutInfo (which extends LayoutInfo)
+    - Grow and span are now on a new GridLayoutInfo class that extends ExtendedLayoutInfo
+    - Layout contants are now all in the new LayoutConstants class (formerly GridContraints)
+    - ResizableHBox/ResizableVBox have been updated with the new hpos/vpos/nodeHPos/nodeVPos parameters from HBox/VBox
+    - ResizableScene now support nodeHPos/nodeVPos parameters
+    - Deck now supports nodeHPos/nodeVPos parameters
+    - Grid position default is LEFT/MIDDLE
+    - Grid now supports nodeHPos/nodeVPos parameters
+    - Grid now handles toFront/toBack correctly (and is the only layout in existence that does)
+    - New DefaultLayout class for supporting the JFXtras defaults system
+    - New JFXContainer class created to support JFXtras layout extensions
+    - Removed org.jfxtras.layout.EmptyBorder.  User org.jfxtras.scene.border.EmptyBorder instead.
+
+* Component Changes:
+    - ScrollView now uses JavaFX ScrollBar and ClipView
+
+* MigLayout Changes:
+    - MigLayout fixed to make it work with JavaFX 1.2.
+    - MigLayout handles dynamic changes to node sizes and their layoutInfo's managed flag
+    - MigLayout code is no longer forked (thanks to nativearrary support in JavaFX!)
+
+* JFXtras Shapes changes:
+    - JFXtras Shapes are now defined as native JavaFX shapes
+    - Shapes are generally more fault tolerant to invalid parameter values
+    - Almond & Asterisk 'width' is now from left to right rather than
+      left-to-center or center-to-right.
+    - Asterisk arm width is now as specified (was twice as wide.)
+    - ReuleauxTriangle is treated as a spherical object and has centerX,
+      centerY, and radius, rather than x/y/width.
+    - All shapes use native JavaFX transforms; specifically, angle
+      of rotation is clockwise rather than counterclockwise as before.
+    - All shapes rotate about their bounds center rather than around
+      a starting point - as do all Path-based native JavaFX shapes.
+
+=====================================================================
+0.4 Release
+
+Project Change:
+    * JFXTras has been split into 3 separate modules: Core, Samples, and Test
+
+New Features:
+    * New ScrollBar/View class.
+    * New Resizable layouts: ResizableCustomNode.fx, ResizableImageView.fx, ResizableMediaView.fx, ResizableHBox.fx, ResizableVBox.fx, and updates to ResizableRectangle.fx
+    * Added in an ImageFix class that fixes backgroundLoading defects.
+    * Added in ImageUtil with helper methods for working with images.
+    * New Border component
+    * New JSON->Object converter
+    * New layout Constraints system
+
+Updates:
+    * Updates to the Grid
+    * Defect fixes for Shapes, Dialog, and others.
+    * A new version of the Shapes library
+    * Defect fixes for Shapes, Dialogs, and others
+
+=====================================================================
+0.3 Release
+
+New Features:
+* New MigLayout layout manager
+* JavaFX 1.1 Compatibility
+
+=====================================================================
+0.2 Release
+
+New Features:
+* New shape library provided via integration with jSilhouette.  Includes the following new shapes:
+	- Almond
+	- Arrow
+	- Asterisk
+	- Astroid
+	- Balloon
+	- Cross
+	- Donut
+	- ETriangle
+	- ITriangle
+	- Lauburu
+	- MultiRoundRectangle
+	- RTriangle
+	- Rays
+	- RegularPolygon
+	- ReuleauxTriangle
+	- RoundPin
+	- Star2
+* ResizableScene class that auto-resizes its content to fill the scene (useful in combination with layouts)
+* New BoundsPainter class for debugging layouts
+
+Test Changes:
+* Added additional test expectations:
+	- is (decorator)
+	- isNot
+* Fixed null handling of test expectation methods
+* Changed nested test behavior to setup and teardown per subtest
+* Shorted assumeThat to that for test fluency
+
+Grid Changes:
+* Fixed triggering of updates in the Grid when a child min/max/pref size changes
+* Added in cell defaults for nested Grids
+* Improved the succinctness of expressing Grid layouts with a new syntax (backwards compatible with the 0.1 syntax):
+	- new row function that allows more concise expression of row contents
+	- modified cell constraint names to be shorter (old names are still supported, but deprecated)
+	- added in a helper class (GridConstraints) with a set of disambiguated static imports that can be used to more succinctly express constraints
+* Fixes a defect with centering of dialogs
+* Fixes a defect with dialog modality when pack is disabled
+
+=====================================================================
+0.1.1 Release
+
+Fixes:
+* Layout package change
+
+=====================================================================
+0.1 Initial Release
+
+New Features:
+* JFXtras Grid
+* JFXtras Dialog
+* Declarative Test Framework
+* Asynchronous Worker

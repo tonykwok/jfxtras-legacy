@@ -1,0 +1,58 @@
+
+Text.summaryTitle {
+    fill: #c3a78c;
+    font: bold 14pt "sans serif";
+}
+
+Text.summaryPrice {
+    fill: #f9f7f6;
+    font: bold 14pt "sans serif";
+}
+
+Star2.filledStar {
+    fill: #df6212;
+    stroke: #cfc0b4;
+}
+
+Star2.emptyStar {
+    fill: transparent;
+    stroke: #cfc0b4;
+}
+
+ResizableRectangle.summaryBackground {
+    fill: #ffffff20;
+    stroke: #ffffffa0;
+    arcWidth: 20;
+    arcHeight: 20;
+    strokeWidth: 1.5;
+}
+
+Slider {
+    trackFill: rgba( 255, 255, 255, 0.2 );
+    trackStroke: rgba( 255, 255, 255, 0.6 );
+    trackHeight: 12;
+    thumbLength: 40;
+    thumbFill: #ddc7af;
+    thumbStroke: #5a5234;
+}
+
+#magnifierLense {
+    stroke: black;
+    fill: #9cb7cd;
+}
+
+#magnifierHandle {
+    stroke: black;
+    strokeWidth: 2;
+}
+
+#searchBackground {
+    fill: rgba( 255, 255, 255, 0.2 );
+    stroke: #ddc7af;
+}
+
+Text.cartPageText {
+    fill: #c3a78c;
+    font: bold 24pt "sans serif";
+}
+

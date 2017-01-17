@@ -1,0 +1,46 @@
+/* 
+    Document   : PagerX
+    Created on : 01.09.2011., 16:52:49
+    Author     : Goran Lochert
+    Description:
+        CSS styles for PagerX control
+*/
+
+/*
+    For first - previous, next - last Buttons add graphics with CSS
+*/
+.pagerx {
+    -fx-skin: "jfxtras.scene.control.PagerXSkin";    
+}
+
+.pagerx .control-box {
+    -fx-spacing: 10;
+    -fx-border-color: red;
+    -fx-padding: 5;
+}
+
+.pagerx .control-box .first-prev-box {
+    -fx-spacing: 5;
+}
+
+.pagerx .control-box .next-last-box {
+    -fx-spacing: 5;
+}
+
+.pagerx .list-combo-boxx:focused {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 5, 5, 4, 3;
+}
+
+/* bug sometimes it gains bottom right */
+/*.pill-button:center, .pill-button:center:hover, .pill-button:center:armed {
+    -fx-background-radius: 0, 0, 0, 0;
+}*/
+
+.pagerx .list-combo-boxx:showing {
+    -fx-color: -fx-pressed-base;
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 5, 5, 4, 3;
+}

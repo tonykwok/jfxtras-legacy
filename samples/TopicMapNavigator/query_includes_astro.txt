@@ -1,0 +1,39 @@
+{
+  "/common/topic/image": [{
+    "id": null
+  }],
+  "/spaceflight/astronaut/missions": [{
+    "name":     null,
+    "id":       null,
+    "/common/topic/image": [{
+      "id":       null,
+      "optional": "optional"
+    }],
+    "optional": "optional"
+  }],
+  "/music/group_member/membership": [{
+    "group": {
+      "name": null,
+      "id":   null,
+      "/common/topic/image": [{
+        "id":       null,
+        "optional": "optional"
+      }],
+      "/music/musical_group/member": [{
+        "member": {
+          "name": null,
+          "id":   null,
+          "/common/topic/image": [{
+            "id":       null,
+            "optional": "optional"
+          }]
+        }
+      }]
+    },
+    "optional": "optional"
+  }],
+  "id":   "/en/david_wolf",
+  "name": null,
+   [ "type": "/spaceflight/astronaut" ,
+    "type": "/music/artist" ]
+}?

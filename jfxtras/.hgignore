@@ -1,0 +1,21 @@
+syntax: glob
+common/.classpath
+common/.project
+common/.settings/*
+controls/.project
+controls/.classpath
+controls/.settings/*
+controls/target/*
+common/target/*
+controls/src/main/java/jfxtras/scene/control/ListComboBoxXSkin.java.bak
+controls/src/main/java/jfxtras/scene/control/PillButtonX.java.bak
+controls/src/main/java/jfxtras/scene/control/PillButtonXContainer.java.bak
+controls/src/main/resources/jfxtras/scene/control/AnimatedPopupX.css.bak
+controls/src/main/resources/jfxtras/scene/control/PillButtonX.css.bak
+controls/src/main/resources/jfxtras/scene/control/PillButtonXContainer.css.bak
+controls/src/test/java/jfxtras/scene/control/test/ListComboBoxXTest1.java.bak
+controls/src/test/java/jfxtras/scene/control/test/PillButtonXTest2.java.bak
+*.ipr
+*.iws
+.idea
+*.iml

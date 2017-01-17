@@ -1,0 +1,94 @@
+/*
+ * Copyright (c) 2008-2010, JFXtras Group
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ * 1. Redistributions of source code must retain the above copyright notice,
+ *    this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ * 3. Neither the name of JFXtras nor the names of its contributors may be used
+ *    to endorse or promote products derived from this software without
+ *    specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ */
+
+.scene {
+    -fx-font: 14pt "Amble Condensed"
+}
+
+#pane2 {
+    -fx-background: purple;
+    -fx-padding: 20;
+}
+
+#pane2 *.label {
+    -fx-text-fill: mistyrose;
+}
+
+#pane2 *.progress-bar {
+    -fx-base: white;
+    -fx-accent: orchid;
+}
+
+/**
+ * The default caspian indeterminate progress bar is a gradient from the accent color
+ * to "transparent".  But transparent is defined as black with 0 opacity.  This caused
+ * my gradient here to go from orchid (the accent color set above) through gray on the
+ * way to transparent.  It looks better if it goes to transparent white than transparent
+ * black.  I also adjusted the stops a bit to make the bar less whispy.  This new CSS
+ * based system gives us picky people a lot of flexibility.
+ */
+#pane2 *.progress-bar:indeterminate *.bar {
+    -fx-background-color: linear (0%,0%) to (100%,0%) stops (0%, rgba(255, 255, 255, 0)) (90%, -fx-accent);
+}
+
+#pane3 {
+    -fx-background: lightsalmon;
+    -fx-padding: 10;
+    -fx-background-radius: 0 10;
+    -fx-effect: dropshadow( gaussian, darkgray, 6, 0, 3, 6);
+}
+
+#pane3 *.xpane-content Text {
+    -fx-font-size: 18pt;
+    -fx-fill: maroon;
+}
+
+#pane5 {
+    -fx-base: green;
+    -fx-background: lemonchiffon;
+}
+
+#pane5 *.xpane-title {
+    -fx-background-radius: 10 10 0 0;
+    -fx-text-fill: honeydew;
+}
+
+#pane5 *.xpane-title *.label {
+    -fx-text-fill: white;
+}
+
+#pane6 *.xpane-title {
+    -fx-font-size: 24pt;
+}
+
+#pane6 *.xpane-content {
+    -fx-background-color: gray, linear (0%,0%) to (100%,100%) stops (0%, aliceblue) (100%, skyblue);
+    -fx-background-radius: 0 0 10 10;
+    -fx-padding: 20;
+}
+

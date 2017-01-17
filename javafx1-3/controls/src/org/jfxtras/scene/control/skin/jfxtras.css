@@ -1,0 +1,137 @@
+/*
+ * Copyright (c) 2008-2010, JFXtras Group
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ * 1. Redistributions of source code must retain the above copyright notice,
+ *    this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ * 3. Neither the name of JFXtras nor the names of its contributors may be used
+ *    to endorse or promote products derived from this software without
+ *    specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ */
+
+.xetched-button {
+    -etched-highlight: rgba( 255, 255, 255, 0.5);
+    -etched-gradient: linear (0%,0%) to (0%,100%) stops (85%, rgba(255, 255, 255, 0.0)) (100%, -etched-highlight);
+
+    -fx-background-color: transparent, transparent;
+    -fx-background-radius: 5;
+    -fx-padding: 5;
+
+    -fx-border-color: -etched-highlight -etched-gradient -etched-highlight -etched-gradient, rgba( 0, 0, 0, 0.4);
+    -fx-border-insets: 1 0 -1 0, 0;
+    -fx-border-radius: 5;
+    -fx-border-width: 1;
+}
+
+.xetched-button:hover {
+    -fx-background-color: transparent, rgba(255, 255, 255, 0.4);
+}
+
+.xetched-button:armed {
+    -fx-background-color: transparent, rgba(0, 0, 0, 0.1);
+}
+
+.xetched-button:disabled {
+    -fx-opacity: .4;
+}
+
+#ul.xetched-button {
+    -fx-border-radius: 5 0 0 0;
+}
+
+#ur.xetched-button {
+    -fx-border-radius: 0 5 0 0;
+}
+
+#lr.xetched-button {
+    -fx-border-radius: 0 0 5 0;
+}
+
+#ll.xetched-button {
+    -fx-border-radius: 0 0 0 5;
+}
+
+#center.xetched-button {
+    -fx-border-radius: 0;
+}
+
+#left.xetched-button {
+    -fx-border-radius: 5 0 0 5;
+}
+
+#right.xetched-button {
+    -fx-border-radius: 0 5 5 0;
+}
+
+#top.xetched-button {
+    -fx-border-radius: 5 5 0 0;
+}
+
+#bottom.xetched-button {
+    -fx-border-radius: 0 0 5 5;
+}
+
+.xpane {
+    -fx-background: white;
+    -fx-background-radius: 0;
+    -fx-padding: 5;
+
+    -fx-title-padding: 3 5;
+    -fx-title-radius: 0;
+}
+
+.xpane-title {
+    -xpane-body: linear (0%,0%) to (0%,100%) stops (0%, derive(-fx-base, 30%)) (100%, derive(-fx-base, -20%));
+    -xpane-border: linear (0%,0%) to (0%,100%) stops (0%, derive(-fx-base, -30%)) (100%,derive(-fx-base, -50%));
+
+    -fx-background-color: -xpane-border, -xpane-body;
+    -fx-background-insets: 0 0 -1 0, 1 1 0 1;
+    -fx-background-radius: inherit;
+    -fx-padding: inherit;
+    -fx-text-fill: ladder -fx-base stops (49%, rgb(235, 235, 235)) (50%, rgb(32, 32, 32))
+}
+
+.xpane-title-close-box {
+    -fx-border-color: ladder -fx-text-fill stops(0%, derive( -fx-text-fill, 100% )) (100%, derive( -fx-text-fill, -25% ));
+    -fx-border-radius: 3;
+    -fx-border-width: 1;
+}
+
+.xpane-title-close-box:hover {
+    -fx-background-color: ladder -fx-text-fill stops (0%, rgba( 0, 0, 0, 0.25)) (100%, rgba( 255, 255, 255, 0.35 ));
+    -fx-background-radius: 3;
+}
+
+.xpane-title-close-mark {
+    -fx-background-color: -fx-text-fill;
+    -fx-background-insets: 3;
+    -fx-padding: 8;
+    -fx-shape: "M 0,0 H1 L 4,3 7,0 H8 V1 L 5,4 8,7 V8 H7 L 4,5 1,8 H0 V7 L 3,4 0,1 Z";
+}
+
+.xpane-content {
+    -xpane-body: linear (0%,0%) to (0%,100%) stops (0%, derive(-fx-background, 30%)) (100%, derive(-fx-background, -20%));
+    -xpane-border: linear (0%,0%) to (0%,100%) stops (0%, derive(-fx-background, -30%)) (100%,derive(-fx-background, -50%));
+
+    -fx-background-color: -xpane-border, -xpane-body;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: inherit;
+    -fx-padding: inherit;
+}

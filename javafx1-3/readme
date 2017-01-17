@@ -1,0 +1,36 @@
+Building JFXtras using Maven
+--------------------------------------
+Maven can be used to build the JFXtras project. There are three steps necessary:
+
+
+Install the JavaFX SDK to your local repository
+===============================================
+
+Unfortunately the Javafx SKD cannot be uploaded to Maven central (licensing issue...). But there exists a plugin that solves that problem. This plugin is deployed to Maven central. Therefore it is just necessary to call:
+
+	mvn org.jfxtras:javafx-maven-plugin:install-sdk-jars
+
+The plugin tries to find the SDK location. If it is not successful, you might want to set the location using the property "javafx.home":
+
+	mvn org.jfxtras:javafx-maven-plugin:install-sdk-jars -Djavafx.home=<path/to/javafx/sdk>
+
+
+Installing the parent
+=====================
+
+There exists a parent pom that contains the common configurations. The parent can be found at its own repository: http://code.google.com/p/jfxtras/source/checkout?repo=parent It is just necessary to call "mvn install" within the project.
+
+	hg clone https://parent.jfxtras.googlecode.com/hg/ jfxtras-parent  
+	cd jfxtras-parent
+	mvn install
+
+
+Installing JFXtras
+==================
+
+JFXtras can then be build using Maven. Just checkout the sources and call "mvn install"
+
+	hg clone https://jfxtras.googlecode.com/hg/ jfxtras  
+	cd jfxtras
+	mvn install
+

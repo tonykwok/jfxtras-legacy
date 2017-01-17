@@ -1,0 +1,26 @@
+/* 
+    Document   : PillButton
+    Created on : 01.09.2011., 08:33:27
+    Author     : Goran Lochert
+    Description: stylesheet for PillButtonContainer         
+*/
+
+.pill-buttonx-container {
+    -fx-background: derive(-fx-base,-30%);
+    -fx-background-color:
+        linear-gradient(to bottom, derive(-fx-base,-30%), derive(-fx-base,-60%)),
+        linear-gradient(to bottom, derive(-fx-base,65%) 2%, derive(-fx-base,-20%) 95%);
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 10, 10;
+    -fx-padding: 10 10 10 10;
+}
+
+/*.pill-button-container:vbox {
+    -fx-background: derive(-fx-base,-20%);
+    -fx-background-color:
+        linear (0%,0%) to (100%,0%) stops (0%,derive(-fx-base,-30%)) (100%,derive(-fx-base,-60%)),
+        linear (0%,0%) to (100%,0%) stops (2%,derive(-fx-base,65%)) (95%,derive(-fx-base,-20%));
+    -fx-background-insets: 0, 0 1 0 1;
+    -fx-background-radius: 0, 0;
+    -fx-padding: 10 5 10 5;
+}*/

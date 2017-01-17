@@ -1,0 +1,5 @@
+package org.jfxtras.topicmapnav.model;
+
+public class AmericanFootballFootballPlayerFormerTeams {
+  public var americanFootballFootballHistoricalRosterPositionTeam:AmericanFootballFootballHistoricalRosterPositionTeam[];
+}
